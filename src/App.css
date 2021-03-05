@@ -1,38 +1,192 @@
-.App {
+:root,
+body,
+* {
+  --bg: #FFF;
+  --bg-one: #003552;
+  --text: #333;
+  --text-one: #FFF;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+
+}
+
+.grid {
+  display: grid;
+  /*width: 90vw;*/
+  height: 100vh;
+  margin: 0 auto;
+  /*background-color: #003552;*/
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*align-content: space-evenly;*/
+  justify-content: center;
+}
+
+nav {
+  background-color: var(--bg-one);
+  overflow: hidden;
+  color: var(--text-one);
+}
+
+/*nav .container {*/
+/*  width: 90vw;*/
+/*  margin: 20px auto;*/
+/*}*/
+
+nav h1 {
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 14px 16px;
+}
+
+nav a {
+  float: right;
+  display: block;
+  color: var(--text-one);
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+nav ul {
+  float: right;
+  padding: 14px 16px;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+nav input {
+  width: 300px;
+  height: 2rem;
+}
+
+.movie-card {
+  width: 200px;
+  height: 370px;
+  margin: 5px 5px;
+  background-color: var(--bg);
+  border: 1px solid var(--text);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.movie-card-img {
+  width: 200px;
+  height: 300px;
+  align-content: center;
+}
+
+.movie-card-img img {
+  height: 300px;
+}
+
+.movie-card a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.movie-card h6 {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row {
+  height: 30px;
+}
+
+.pagination {
+  margin: 10px auto;
+  list-style-type: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pagination li {
+  display: inline-block;
+  margin: 3px;
+  padding: 10px 12px;
+  border: 1px solid var(--bg-one);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.pagination a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.pagination li:hover,
+.pagination li.active {
+  color: var(--text-one);
+}
+
+.pagination li:hover,
+.pagination li.active {
+  background-color: var(--bg-one);
+}
+
+.pagination .mute,
+.pagination .mute:hover {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  color: #CCC;
+}
+
+/*  Screens smaller than 600px  */
+@media only screen and (max-width: 600px) {
+  nav a:not(:first-child) {
+    display: none;
+  }
+
+  nav li.icon {
+    float: right;
+    display: block;
+  }
+
+  .grid {
+    display: grid;
+    width: 100vw;
+    background-color: #003552;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*align-content: space-evenly;*/
+    justify-content: space-evenly;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (min-width: 601px) {
+  nav .icon {
+    display: none;
   }
 }
+
+/*@media only screen and (min-width: 481px) and (max-width: 768px) {*/
+
+/*}*/
+
+/*@media only screen and (min-width: 769px) and (max-width: 1024px) {*/
+
+/*}*/
