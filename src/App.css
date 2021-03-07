@@ -16,17 +16,14 @@ body,
 
 .grid {
   display: grid;
-  /*width: 90vw;*/
   height: 100vh;
   margin: 0 auto;
-  /*background-color: #003552;*/
 }
 
 .flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*align-content: space-evenly;*/
   justify-content: center;
 }
 
@@ -35,11 +32,6 @@ nav {
   overflow: hidden;
   color: var(--text-one);
 }
-
-/*nav .container {*/
-/*  width: 90vw;*/
-/*  margin: 20px auto;*/
-/*}*/
 
 nav h1 {
   display: inline-block;
@@ -172,7 +164,6 @@ nav input {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /*align-content: space-evenly;*/
     justify-content: space-evenly;
   }
 }
@@ -182,11 +173,3 @@ nav input {
     display: none;
   }
 }
-
-/*@media only screen and (min-width: 481px) and (max-width: 768px) {*/
-
-/*}*/
-
-/*@media only screen and (min-width: 769px) and (max-width: 1024px) {*/
-
-/*}*/
