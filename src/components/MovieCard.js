@@ -1,5 +1,5 @@
 import React from 'react';
-import defaultImage from '../img/default-movie.png';
+import defaultImage from '../img/mse_default_img-01.png';
 
 const MovieCard = (props) => {
     return (
