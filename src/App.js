@@ -65,7 +65,7 @@ class App extends React.Component {
                     handleChange={this.handleChange}
                 />
 
-                <div className={'grid'}>
+                <div className={'results'}>
                     {
                         this.state.currentMovie == null ?
                             <div>
