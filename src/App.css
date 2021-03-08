@@ -68,6 +68,12 @@ nav input {
   height: 2rem;
 }
 
+.results {
+  margin: 30px auto;
+  z-index: 1;
+  max-width: 1080px;
+}
+
 .movie-card {
   width: 200px;
   height: 370px;
