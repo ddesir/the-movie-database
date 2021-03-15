@@ -2,9 +2,28 @@ import React from 'react';
 import defaultImage from '../img/mse_default_img-01.png';
 
 const MovieDetail = (props) => {
+    const months = {
+        0: 'January',
+        1: 'February',
+        2: 'March',
+        3: 'April',
+        4: 'May',
+        5: 'June',
+        6: 'July',
+        7: 'August',
+        8: 'September',
+        9: 'October',
+        10: 'November',
+        11: 'December'
+    }
+
+    const d = new Date(props.currentMovie.release_date);
+    const month = d.getMonth();
+    const day = d.getDay();
+    const year = d.getFullYear();
 
     return (
-        <div>
+        <div className={'movie-details'}>
             <div>
                 <a href={'#'} onClick={props.closeMovieDetail}>
                     {`\u3008 Back`}
@@ -26,15 +45,15 @@ const MovieDetail = (props) => {
             </div>
 
             <div>
-                <p>
+                <p className={'title'}>
                     {props.currentMovie.title}
                 </p>
 
-                <p>
-                    {props.currentMovie.release_date}
+                <p className={'date'}>
+                    {`${months[month]} ${day}, ${year}`}
                 </p>
 
-                <p>
+                <p className={'overview'}>
                     {props.currentMovie.overview}
                 </p>
             </div>
