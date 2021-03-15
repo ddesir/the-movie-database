@@ -14,19 +14,6 @@ body,
 
 }
 
-.grid {
-  display: grid;
-  height: 100vh;
-  margin: 0 auto;
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 nav {
   background-color: var(--bg-one);
   overflow: hidden;
@@ -66,32 +53,6 @@ nav ul li {
 nav input {
   width: 300px;
   height: 2rem;
-}
-
-.results {
-  margin: 30px auto;
-  z-index: 1;
-  max-width: 1080px;
-}
-
-.movie-card {
-  width: 200px;
-  height: 370px;
-  margin: 5px 5px;
-  background-color: var(--bg);
-  border: 1px solid var(--text);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.movie-card-img {
-  width: 200px;
-  height: 300px;
-  align-content: center;
-}
-
-.movie-card-img img {
-  height: 300px;
 }
 
 .movie-card a {
@@ -151,6 +112,7 @@ nav input {
 
 /*  Screens smaller than 600px  */
 @media only screen and (max-width: 600px) {
+
   nav a:not(:first-child) {
     display: none;
   }
@@ -160,22 +122,85 @@ nav input {
     display: block;
   }
 
-  .grid {
-    display: grid;
-    width: 100vw;
-    background-color: #003552;
-  }
+  /*.grid {*/
+  /*  display: grid;*/
+  /*  width: 100vw;*/
+  /*  background-color: #003552;*/
+  /*}*/
 
   .flex {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-evenly;
   }
+
+  .movie-card {
+    flex: 1;
+    width: 100vw;
+    height: 80px;
+    padding: 1em 1em;
+    border-bottom: 0.5px solid var(--text);
+  }
+
+  .movie-card:last-child {
+    border-bottom: 0;
+  }
+
+  .movie-card-img {
+    width: 50px;
+    height: 75px;
+    float: left;
+    margin-right: 1em;
+  }
+
+  .movie-card-img img {
+    width: 50px;
+    height: 75px;
+  }
+
 }
 
 @media only screen and (min-width: 601px) {
   nav .icon {
     display: none;
+  }
+
+  .grid {
+  display: grid;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+  .results {
+    margin: 30px 0;
+    z-index: 1;
+    max-width: 1080px;
+  }
+
+  .movie-card {
+    width: 200px;
+    height: 370px;
+    margin: 5px 5px;
+    background-color: var(--bg);
+    border: 1px solid var(--text);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .movie-card-img {
+    width: 200px;
+    height: 300px;
+    align-content: center;
+  }
+
+  .movie-card-img img {
+    height: 300px;
   }
 }
