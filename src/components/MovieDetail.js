@@ -45,9 +45,9 @@ const MovieDetail = (props) => {
             </div>
 
             <div>
-                <p className={'title'}>
+                <h1 className={'title'}>
                     {props.currentMovie.title}
-                </p>
+                </h1>
 
                 <p className={'date'}>
                     {`${months[month]} ${day}, ${year}`}
