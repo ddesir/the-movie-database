@@ -11,6 +11,7 @@ const MovieList = (props) => {
                             key={i}
                             title={movie.title}
                             image={movie.poster_path}
+                            date={movie.release_date}
                             viewMovieDetail={props.viewMovieDetail}
                             movieId={movie.id}
                         />

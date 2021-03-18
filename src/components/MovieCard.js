@@ -1,7 +1,8 @@
 import React from 'react';
-import defaultImage from '../img/default-movie.png';
+import defaultImage from '../img/mse_default_img-01.png';
 
 const MovieCard = (props) => {
+    const year = new Date(props.date).getFullYear()
     return (
         <div className={'movie-card'}>
             <a href={'#'} onClick={() => props.viewMovieDetail(props.movieId)}>
@@ -20,6 +21,7 @@ const MovieCard = (props) => {
                 </div>
 
                 <h6>{props.title}</h6>
+                <p className={'date'}>{year}</p>
             </a>
 
         </div>

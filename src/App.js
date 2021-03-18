@@ -65,10 +65,10 @@ class App extends React.Component {
                     handleChange={this.handleChange}
                 />
 
-                <div className={'grid'}>
+                <div className={'results'}>
                     {
                         this.state.currentMovie == null ?
-                            <div>
+                            <>
                                 <MovieList
                                     movies={this.state.movies}
                                     viewMovieDetail={this.viewMovieDetail}
@@ -83,7 +83,7 @@ class App extends React.Component {
                                         />
                                 }
 
-                            </div> :
+                            </> :
                             <MovieDetail
                                 currentMovie={this.state.currentMovie}
                                 closeMovieDetail={this.closeMovieDetail}
