@@ -207,7 +207,7 @@ nav input {
 }
 
   .results {
-    margin: 30px 0;
+    margin: 30px auto;
     z-index: 1;
     max-width: 1080px;
   }
@@ -230,5 +230,9 @@ nav input {
 
   .movie-card-img img {
     height: 300px;
+  }
+
+  .movie-card .date {
+    display: none;
   }
 }
