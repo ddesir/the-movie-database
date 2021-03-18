@@ -69,7 +69,7 @@ nav input {
 }
 
 .movie-details {
-  width: 100vw;
+  width: 95vw;
   max-width: 1080px;
   margin: 0 1em;
 }
@@ -126,6 +126,16 @@ nav input {
   background-color: #FFF;
   border: 1px solid #CCC;
   color: #CCC;
+}
+
+.button {
+  margin: 0.75em 0;
+}
+
+.button a {
+  color: var(--bg-one);
+  font-weight: 800;
+  text-decoration: none;
 }
 
 /*  Screens smaller than 600px  */
