@@ -24,13 +24,13 @@ const MovieDetail = (props) => {
 
     return (
         <div className={'movie-details'}>
-            <div>
+            <div className={'button'}>
                 <a href={'#'} onClick={props.closeMovieDetail}>
                     {`\u3008 Back`}
                 </a>
             </div>
 
-            <div className={'Row'}>
+            <div>
                 {
                     props.currentMovie.poster_path == null ?
                         <img
