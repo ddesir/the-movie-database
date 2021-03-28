@@ -58,6 +58,26 @@ class App extends React.Component {
     render() {
         const numPages = Math.floor(this.state.totalResults / 20);
 
+        const options = {
+            root : document.querySelector('.results'),
+            rootMargin : '0px',
+            threshold : 1.0
+        }
+
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // this.nextPage(this.pageNumber);
+                    console.log(entry);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+
+        const inter = document.getElementById('intersection');
+        observer.observe(inter);
+
         return (
             <div className={'container'}>
                 <Nav
@@ -74,13 +94,15 @@ class App extends React.Component {
                                     viewMovieDetail={this.viewMovieDetail}
                                 />
 
+                                <div id={'intersection'}><p>Intersection</p></div>
+
                                 {
-                                    this.state.totalResults > 20 &&
+                                    /*this.state.totalResults > 20 &&
                                         <Pagination
                                             pages={numPages}
                                             nextPage={this.nextPage}
                                             currentPage={this.state.currentPage}
-                                        />
+                                        />*/
                                 }
 
                             </> :
